@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-yaml
+      - id: check-xml
+      - id: check-merge-conflict
+      - id: no-commit-to-branch
+        args: [--branch, main]
+  - repo: https://github.com/prettier/prettier
+    rev: "1.16.3"
+    hooks:
+      - id: prettier
+        language_version: system
