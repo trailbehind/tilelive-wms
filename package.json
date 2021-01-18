@@ -11,7 +11,7 @@
     "url": "git://github.com/trailbehind/tilelive-wms.git"
   },
   "author": "Jesse Crocker",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/trailbehind/tilelive-wms/issues"
   },
