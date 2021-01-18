@@ -10,7 +10,7 @@ new imageserver(
       return console.log(error);
     }
     console.log("got source");
-    r.getTile(12, 647, 1800, function(error, tile) {
+    r.getTile(8, 42, 84, function(error, tile) {
       if (error) {
         return console.log(error);
       }

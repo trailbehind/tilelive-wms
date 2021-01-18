@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/trailbehind/tilelive-wms",
   "dependencies": {
+    "debug": "^4.3.1",
     "@mapbox/sphericalmercator": "^1.1.0",
     "@mapbox/tilelive": "^6.1.0",
     "request": "^2.88.2",

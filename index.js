@@ -1,5 +1,6 @@
 module.exports = WMSSource;
 
+var debug = require("debug")("wms");
 var request = require("retry-request", {
   request: require("request")
 });
@@ -69,6 +70,8 @@ WMSSource.prototype.getTile = function(z, x, y, callback) {
     ...this.options
   };
 
+  debug(`getTile ${z}/${x}/${y} params:${JSON.stringify(params)}`);
+
   request(
     {
       url: this.server_root,
@@ -77,6 +80,11 @@ WMSSource.prototype.getTile = function(z, x, y, callback) {
     },
     retry_options,
     function(error, response, body) {
+      debug(
+        `Received response for url ${response.request.href} status:${
+          response.statusCode
+        }`
+      );
       if (error) {
         return callback(error);
       }
