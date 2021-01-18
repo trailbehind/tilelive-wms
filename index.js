@@ -50,7 +50,7 @@ function WMSSource(uri, callback) {
 }
 
 WMSSource.prototype.getTile = function(z, x, y, callback) {
-  var tile_bbox = merc.bbox(x, y, z, callback, "900913");
+  var tile_bbox = merc.bbox(x, y, z, false, "900913");
 
   var tilesize = this.tilesize * this.scale;
   var format = this.format;
