@@ -81,9 +81,7 @@ WMSSource.prototype.getTile = function(z, x, y, callback) {
     retry_options,
     function(error, response, body) {
       debug(
-        `Received response for url ${response.request.href} status:${
-          response.statusCode
-        }`
+        response
       );
       if (error) {
         return callback(error);
