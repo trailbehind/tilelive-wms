@@ -64,6 +64,7 @@ WMSSource.prototype.getTile = function(z, x, y, callback) {
     service: "WMS",
     request: "GetMap",
     version: "1.1.1",
+    bboxSR:'900913',
     layers: "",
     styles: "",
     transparent: false,
